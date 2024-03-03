@@ -1,0 +1,94 @@
+{
+  "id": "67014898-02aa-458c-83d5-0066ae26b89e",
+  "version": "2.0",
+  "name": "PDF_DOWNLOAD",
+  "url": "https://arxiv.org",
+  "tests": [{
+    "id": "5d317d8c-fcee-4181-b569-ad717edf7cf8",
+    "name": "test1",
+    "commands": [{
+      "id": "9e192eef-98c2-4bff-bb14-f8baf129a4e7",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "12c6766b-a25f-48e6-ae77-acca230e1710",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1920x1080",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "869719d3-7171-408b-a799-d6c8b4e4dff9",
+      "comment": "",
+      "command": "click",
+      "target": "id=main-cs",
+      "targets": [
+        ["id=main-cs", "id"],
+        ["linkText=Computing Research Repository", "linkText"],
+        ["css=#main-cs", "css:finder"],
+        ["xpath=//a[contains(text(),'Computing Research Repository')]", "xpath:link"],
+        ["xpath=//a[@id='main-cs']", "xpath:attributes"],
+        ["xpath=//div[@id='content']/ul[3]/li/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'https://info.arxiv.org/help/cs/index.html')]", "xpath:href"],
+        ["xpath=//ul[3]/li/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Computing Research Repository')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "9a4de722-17cf-4155-84b8-0715cc916a86",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=main CS archive page",
+      "targets": [
+        ["linkText=main CS archive page", "linkText"],
+        ["css=p:nth-child(4) > a:nth-child(1)", "css:finder"],
+        ["xpath=//a[contains(text(),'main CS archive page')]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'https://arxiv.org/archive/cs')]", "xpath:href"],
+        ["xpath=//p[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'main CS archive page')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "49660c66-d134-4820-9a79-48a648432fcc",
+      "comment": "",
+      "command": "click",
+      "target": "css=ul:nth-child(5) > li:nth-child(1) > a:nth-child(2)",
+      "targets": [
+        ["css=ul:nth-child(5) > li:nth-child(1) > a:nth-child(2)", "css:finder"],
+        ["xpath=(//a[contains(text(),'new')])[2]", "xpath:link"],
+        ["xpath=//div[@id='content']/ul[2]/li/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/list/cs.AI/new')]", "xpath:href"],
+        ["xpath=//ul[2]/li/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "97c512be-dce3-4157-9320-fe7e0929aae4",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=pdf",
+      "targets": [
+        ["linkText=pdf", "linkText"],
+        ["css=dl:nth-child(10) > dt:nth-child(1) a:nth-child(2)", "css:finder"],
+        ["xpath=//a[contains(text(),'pdf')]", "xpath:link"],
+        ["xpath=//div[@id='dlpage']/dl/dt/span/a[2]", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/pdf/2402.18679')]", "xpath:href"],
+        ["xpath=//span/a[2]", "xpath:position"],
+        ["xpath=//a[contains(.,'pdf')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "bd6d72ec-85eb-4c6a-a483-c8a940de1b93",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["5d317d8c-fcee-4181-b569-ad717edf7cf8"]
+  }],
+  "urls": ["https://arxiv.org/"],
+  "plugins": []
+}
